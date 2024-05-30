@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react'
+import Navbar from './components/Navbar';
+import News from './components/News';
+
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+       <Navbar/>
+       <News/> 
+      </div>
+    )
+  }
 }
 
-export default App;
+// difference in class based compononent and function based component is in function  based component we return direclty a component and in class based component we create render function and then return in it . in class based component we can manage methods easily. 
